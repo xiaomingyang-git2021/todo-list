@@ -1,4 +1,6 @@
+import Todo from './components/Todo';
 import './index.css'
+
 
 function App() {
   return (
@@ -46,7 +48,10 @@ function App() {
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading"
       >
-        <li className="todo stack-small">
+        <Todo />
+        <Todo />
+        <Todo />
+        {/* <li className="todo stack-small">
           <div className="c-cb">
             <input id="todo-0" type="checkbox" defaultChecked={true} />
             <label className="todo-label" htmlFor="todo-0">
@@ -93,7 +98,7 @@ function App() {
               Delete <span className="visually-hidden">Repeat</span>
             </button>
           </div>
-        </li>        
+        </li>         */}
       </ul> 
     </div>
   );
