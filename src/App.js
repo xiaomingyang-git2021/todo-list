@@ -3,6 +3,10 @@ import Form from './components/Form';
 import FilterButton from './components/FilterButton';
 import './index.css'
 
+function addTask(name) {
+  alert(name)
+}
+
 
 function App(props) {
   const taskList = props.tasks?.map(task => (
@@ -17,7 +21,7 @@ function App(props) {
   return (
     <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
-      <Form />
+      <Form addTask={addTask} />
       {/* <form>
         <h2 className="label-wrapper">
           <label htmlFor="new-todo-input" className="label__lg">
