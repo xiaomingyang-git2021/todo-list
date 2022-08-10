@@ -70,6 +70,16 @@ function App(props) {
       editTask={editTask}
     />
   ));
+
+  const filterList = FILTER_NAMES.map((name) => (
+    <FilterButton 
+      key={name} 
+      name={name}
+      isPressed={name === filter}
+      setFilter={setFilter}
+    />
+  ));
+  
   
   function addTask(name) {
     const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
@@ -107,9 +117,7 @@ function App(props) {
         </button>
       </form> */}
       <div className="filters btn-group stack-exception">
-        <FilterButton />
-        <FilterButton />
-        <FilterButton />
+        {filterList}
         {/* <button type="button" className="btn toggle-btn" aria-pressed="true">
           <span className="visually-hidden">Show</span>
           <span>all</span>
